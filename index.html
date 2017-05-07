@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swing Seat Finder</title>
+    <script type="text/javascript" src="js/finder.js"></script>
+  </head>
+  <body>
+    <form id="location" onsubmit="lookup(event)">
+      <label>
+        Postcode
+        <input name="postcode" />
+      </label>
+      <label>
+        Hit me
+        <input type="submit" />
+      </label>
+    </form>
+    <table id="results" style="display: none;">
+      <tr>
+        <th>Constituency</th>
+        <th>2015 Winner</th>
+        <th>2015 Votes</th>
+        <th>2015 Vote %</th>
+        <th>2015 Majority</th>
+        <th>2015 Party 2</th>
+        <th>2015 Party 3</th>
+      </tr>
+    </table>
+  </body>
+</html>
