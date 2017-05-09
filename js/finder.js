@@ -61,6 +61,13 @@ function lookup(event) {
         const constituencyVoteData = localConstituencies.map(function(consts) { return voteData[consts.name] })
 
         const resTable = document.getElementById('results')
+        // Remove old data
+        if (resTable.rows.length > 1) {
+          for (let i = resTable.rows.length - 1; i > 0; i--) {
+            resTable.deleteRow(i)
+          }
+        }
+        // Populate new data
         constituencyVoteData.forEach(function(constituency) {
           if (!constituency) return
           const resRow = resTable.insertRow()
