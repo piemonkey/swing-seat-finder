@@ -4,22 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Swing Seat Finder</title>
+    <link rel="stylesheet" href="style/spectre.min.css" />
     <script type="text/javascript" src="js/promise.js"></script>
     <script type="text/javascript" src="js/fetch.js"></script>
     <script type="text/javascript" src="js/finder.js"></script>
   </head>
   <body>
-    <form id="location" onsubmit="lookup(event)">
-      <label>
-        Postcode
-        <input name="postcode" />
-      </label>
-      <label>
-        Hit me
-        <input type="submit" />
-      </label>
-    </form>
-    <table id="results" style="display: none;">
+    <div class="container">
+      <form id="location" onsubmit="lookup(event)" class="">
+        <label for="postcode" class="form-label">
+          Postcode
+        </label>
+        <input name="postcode" class="form-input" />
+        <button type="submit" class="btn btn-primary mt-10">
+          Get neighbouring vote counts
+        </button>
+      </form>
+    </div>
+    <table id="results" class="table table-striped mt-10" style="display: none;">
       <tr>
         <th>Constituency</th>
         <th>2015 Winner</th>
